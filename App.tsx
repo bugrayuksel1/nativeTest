@@ -26,7 +26,15 @@ function App(): React.JSX.Element {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Users">
+      <Stack.Navigator
+        initialRouteName="Users"
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: 'orange',
+          },
+          headerTintColor: 'white',
+          headerTitleStyle: {fontWeight: 'bold'},
+        }}>
         <Stack.Screen
           name="Home"
           component={Home}
@@ -34,8 +42,18 @@ function App(): React.JSX.Element {
             title: 'Anasayfa',
           }}
         />
-        <Stack.Screen name="Users" component={Users} />
-        <Stack.Screen name="UserDetail" component={UserDetail} />
+        <Stack.Screen
+          name="Users"
+          component={Users}
+          options={{
+            title: 'Users',
+          }}
+        />
+        <Stack.Screen
+          name="UserDetail"
+          component={UserDetail}
+          options={({route}) => ({title: route.params.name})}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
