@@ -14,6 +14,7 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Home from './src/screens/home';
 import Users from './src/screens/Users';
 import UserDetail from './src/screens/UserDetail';
+import Form from './src/components/form';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,7 +28,7 @@ function App(): React.JSX.Element {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Users"
+        initialRouteName="Home"
         screenOptions={{
           headerStyle: {
             backgroundColor: 'orange',
@@ -53,6 +54,11 @@ function App(): React.JSX.Element {
           name="UserDetail"
           component={UserDetail}
           options={({route}) => ({title: route.params.name})}
+        />
+        <Stack.Screen
+          name="Form"
+          component={Form}
+          options={({route}) => ({title: 'Form'})}
         />
       </Stack.Navigator>
     </NavigationContainer>

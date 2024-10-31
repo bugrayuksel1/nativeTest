@@ -43,6 +43,7 @@ function Home({navigation}: any): React.JSX.Element {
         title="Kullanıcıları Gör"
         onPress={() => navigation.navigate('Users')}
       />
+      <Button title="Formu Gör" onPress={() => navigation.navigate('Form')} />
     </View>
   );
 }
