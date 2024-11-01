@@ -15,6 +15,7 @@ import Home from './src/screens/home';
 import Users from './src/screens/Users';
 import UserDetail from './src/screens/UserDetail';
 import Form from './src/components/form';
+import FormWithFormik from './src/components/FormWithFormik';
 
 const Stack = createNativeStackNavigator();
 
@@ -59,6 +60,11 @@ function App(): React.JSX.Element {
           name="Form"
           component={Form}
           options={({route}) => ({title: 'Form'})}
+        />
+        <Stack.Screen
+          name="FormWithFormik"
+          component={FormWithFormik}
+          options={({route}) => ({title: 'Formik'})}
         />
       </Stack.Navigator>
     </NavigationContainer>

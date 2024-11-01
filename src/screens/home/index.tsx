@@ -44,6 +44,10 @@ function Home({navigation}: any): React.JSX.Element {
         onPress={() => navigation.navigate('Users')}
       />
       <Button title="Formu Gör" onPress={() => navigation.navigate('Form')} />
+      <Button
+        title="Formik Gör"
+        onPress={() => navigation.navigate('FormWithFormik')}
+      />
     </View>
   );
 }
