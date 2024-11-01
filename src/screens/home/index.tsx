@@ -48,6 +48,10 @@ function Home({navigation}: any): React.JSX.Element {
         title="Formik Gör"
         onPress={() => navigation.navigate('FormWithFormik')}
       />
+      <Button
+        title="NativeBase Gör"
+        onPress={() => navigation.navigate('NativeBase')}
+      />
     </View>
   );
 }
