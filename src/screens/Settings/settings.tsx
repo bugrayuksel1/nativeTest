@@ -1,10 +1,13 @@
 import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, {useContext} from 'react';
+import ThemeContext from '../../Context/ThemeContext';
 
 const Settings = () => {
+  const {theme} = useContext(ThemeContext);
+
   return (
     <View>
-      <Text>S</Text>
+      <Text>Active Theme: {theme}</Text>
     </View>
   );
 };

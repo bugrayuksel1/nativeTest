@@ -1,13 +1,6 @@
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
-import {
-  View,
-  ScrollView,
-  StyleSheet,
-  Text,
-  ActivityIndicator,
-  Button,
-} from 'react-native';
+import {View, StyleSheet, ActivityIndicator, Button} from 'react-native';
 
 function User({navigation}: any): React.JSX.Element {
   const [albums, setAlbums] = useState([]);
@@ -62,4 +55,4 @@ function User({navigation}: any): React.JSX.Element {
 
 const styles = StyleSheet.create({});
 
-export default Home;
+export default User;
