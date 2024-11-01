@@ -3,10 +3,14 @@ import React, {useContext} from 'react';
 import ThemeContext from '../../Context/ThemeContext';
 
 const Home = ({navigation}: any): React.JSX.Element => {
-  const {theme} = useContext(ThemeContext);
+  const {theme, setTheme} = useContext(ThemeContext);
 
   return (
     <View style={styles.container}>
+      <Button
+        title="Toggle Theme"
+        onPress={() => setTheme(prev => (prev === 'dark' ? 'light' : 'dark'))}
+      />
       <Text>Active Theme: {theme}</Text>
       <Button
         title="Yaptığım uygulamalar"

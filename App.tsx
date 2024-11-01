@@ -1,15 +1,14 @@
 // App.js
-import React, {useState} from 'react';
+import React from 'react';
 import {StyleSheet} from 'react-native';
-import ThemeContext from './src/Context/ThemeContext';
+import {ThemeContextProvider} from './src/Context/ThemeContext';
 import Router from './src/Router';
 
 function App(): React.JSX.Element {
-  const [theme, setTheme] = useState('dark');
   return (
-    <ThemeContext.Provider value={{theme, setTheme}}>
+    <ThemeContextProvider>
       <Router />
-    </ThemeContext.Provider>
+    </ThemeContextProvider>
   );
 }
 
