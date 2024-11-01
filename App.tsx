@@ -18,6 +18,8 @@ import UserDetail from './src/screens/UserDetail';
 import Form from './src/components/form';
 import FormWithFormik from './src/components/FormWithFormik';
 import NativeBase from './src/components/nativebase';
+import Education from './src/screens/home/education';
+import Settings from './src/screens/Settings/settings';
 
 const Stack = createNativeStackNavigator();
 
@@ -72,7 +74,17 @@ function App(): React.JSX.Element {
           <Stack.Screen
             name="NativeBase"
             component={NativeBase}
-            options={({route}) => ({title: 'NativeBase'})}
+            options={({route}) => ({title: 'Nativebase'})}
+          />
+          <Stack.Screen
+            name="Education"
+            component={Education}
+            options={({route}) => ({title: 'Education'})}
+          />
+          <Stack.Screen
+            name="Settings"
+            component={Settings}
+            options={({route}) => ({title: 'Settings'})}
           />
         </Stack.Navigator>
       </NavigationContainer>
