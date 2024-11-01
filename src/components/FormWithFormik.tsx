@@ -1,9 +1,10 @@
 import {Button, StyleSheet, Text, TextInput, View} from 'react-native';
-import React, {useState} from 'react';
-import {Formik, useFormik} from 'formik';
+import React from 'react';
+import {useFormik} from 'formik';
+// import validationSchema from './validation';
 
 const FormWithFormik = () => {
-  const {values, handleSubmit, handleChange} = useFormik({
+  const {values, errors, handleSubmit, handleChange} = useFormik({
     initialValues: {
       username: '',
       email: '',
@@ -13,9 +14,11 @@ const FormWithFormik = () => {
     onSubmit: values => {
       console.log(values);
     },
+    // validationSchema,
   });
   return (
     <View style={styles.container}>
+      <Text>{JSON.stringify(errors, null, 2)}</Text>
       <View style={styles.item}>
         <TextInput
           style={styles.input}
